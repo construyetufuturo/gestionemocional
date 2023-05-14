@@ -170,7 +170,7 @@ header{
     text-align: center;
     font-weight: 500;
 }
-.header-container .titulo{
+.contenedor .titulo{
     font-size:2.3rem;
     margin-bottom: 2.5rem;
     color: #fff;
@@ -1132,7 +1132,9 @@ footer{
     .contenedor{
         padding-top: 25px;
     }
-    
+    .subtitulo{
+        font-size: 28px;
+    }
     #cuenta{
         margin: 18px 0;
 
@@ -1168,9 +1170,9 @@ footer{
         width: 100%;
         height: 50%;
     }
-    .titulo{
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+    .contenedor .titulo{
+        font-size: 2rem;
+        line-height: 2.1rem;
     }
     
     
@@ -1231,6 +1233,10 @@ footer{
     }
     .logo{
         margin: 0 auto;
+    }
+    .contenedor .titulo{
+        font-size: 1.5rem;
+        line-height: 1.6rem;
     }
    
 }
