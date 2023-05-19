@@ -132,7 +132,7 @@ header{
     box-sizing: border-box;
     border: 0 solid #edf2f7;
     text-align: center;
-    background-color: rgb(41,41,41);
+    background-color: transparent;
     color: rgba(242, 242, 242,0.6);
     width: 250px;
     margin-right: auto;
@@ -170,13 +170,25 @@ header{
     text-align: center;
     font-weight: 500;
 }
+.contenedor .titulo-container{
+    width: 80%;
+    /* background-color: rgba(255, 255, 255, .15);    */
+    /* backdrop-filter: blur(2px); */
+    margin: auto;
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
 .contenedor .titulo{
-    font-size:2.3rem;
+    font-size:2.1rem;
     margin-bottom: 2.5rem;
-    color: #fff;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    /* color: white; */
     font-weight: 600;
     letter-spacing: -.025em;
-    line-height: 3.2rem;
+    line-height: 2.8rem;
+    padding: 8px 18px;
+    
 }
 
 .contenedor .copy{
@@ -187,7 +199,7 @@ header{
     font-weight: 200;
     /* color: #f4f98f; */
     color: #f0f1a6;
-    
+    /* color: #f2f2f2; */
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 4rem;
@@ -199,14 +211,15 @@ a:link, a:visited, a:active {
 .ver-video a{
     cursor: pointer;
     /* background-color: #06171a; */
-    background-color:rgb(50, 44, 181);
+    /* background-color:rgb(50, 44, 181); */
+    background-color:transparent;
     margin: auto;
     display: block;
     width: 200px;
     border-radius: 9999px;
     color: #f2f2f2;
     text-align: center;
-    border: 0 solid #edf2f7;
+    border: 1px solid #edf2f7;
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -214,6 +227,10 @@ a:link, a:visited, a:active {
     padding-right: 1.5rem;
     padding-top: .75rem;
     padding-bottom: .75rem;
+}
+.ver-video a:hover{
+    background-color: rgb(50, 44, 181);
+    border: none;
 }
 .creditos-recursos{
     font-size: .75rem;
@@ -897,6 +914,9 @@ footer{
 /* #CC6600  */
 /* RESPONSIVE */
 @media screen and (max-width:985px) {
+    .contenedor .titulo-container{
+        width: 100%;
+    }
     .contenedor-bonos{
         width: 45%;
     }
