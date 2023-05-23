@@ -293,7 +293,7 @@ a:link, a:visited, a:active {
 
 /* perfil cliente */
 
-.perfil-cliente-section p{
+.checklist-servicio .service p{
     /* color: #f0f1a6; */
     color: #fff;
 }
