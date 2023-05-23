@@ -865,7 +865,7 @@ footer{
 }
 .brand{
     font-weight: 500;
-    font-size: 40px;
+    font-size: 35px;
 }
 .brand+p{
     font-weight: 500;
@@ -1191,8 +1191,8 @@ footer{
         height: 50%;
     }
     .contenedor .titulo{
-        font-size: 2rem;
-        line-height: 2.1rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
     }
     
     
