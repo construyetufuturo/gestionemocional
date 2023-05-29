@@ -19,6 +19,7 @@
 :root{
     scroll-behavior: smooth;
     --bg: #01122e;
+    --img-scale: 1.001
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -240,10 +241,12 @@ a:link, a:visited, a:active {
     text-decoration:none;
 }
 /* cuenta regresiva */
+
 #cuenta{
     display: flex;
     justify-content:center;
-    margin: 40px 60px;
+    margin: 60px 60px;
+    
 }
 
 .simply-amount{
@@ -258,6 +261,7 @@ a:link, a:visited, a:active {
     color: #fff;
     border-radius: 50%;
     border: 2px solid #fff;
+    
 }
 .simply-word{
     font-weight: 300;
@@ -267,6 +271,7 @@ a:link, a:visited, a:active {
 .simply-hours-section,.simply-minutes-section,.simply-seconds-section{
     text-align: center;
     margin: 0 8px;
+    
 }
 
 .simply-days-section{
@@ -290,7 +295,106 @@ a:link, a:visited, a:active {
 .anuncio span{
     color: #f6d365;
 }
+/* START CARDS EFECT */
+.contenedor .mySwiper-cards {
+    width: 300px;
+    height: 380px;
+  }
 
+  .contenedor .slide-cards {
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 18px;
+    
+  }
+  .contenedor .slide-cards article{
+    color: #01122e;
+    padding: 18px 12px;
+  }
+  .slide-cards figure {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .contenedor-servicio .slide-cards img {
+    width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .contenedor .slide-cards:nth-child(1n) {
+    background-color: #fff;   
+    backdrop-filter: blur(2px);
+  }
+
+  .contenedor .slide-cards:nth-child(2n) {
+    background-color: #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(3n) {
+    background-color:  #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(4n) {
+    background-color: #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(5n) {
+    background-color: #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(6n) {
+    background-color: #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(7n) {
+    background-color: #fff;
+  }
+
+  .contenedor .slide-cards:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+
+  .contenedor .slide-cards:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .contenedor .slide-cards:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  }
+  @keyframes swipe-hand {
+
+
+    0% {
+        margin:0;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        margin-right:20px;
+        transform: rotate(-5deg);
+    }
+
+
+
+}
+.container-hand{
+    width: 80px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 8px;
+}
+.contenedor-servicio .handswipe {
+    animation:         swipe-hand .8s alternate infinite; /* IE 10+, Fx 29+ */
+    animation-timing-function: ease;
+    width: 100px;
+}
+/* END CARDS EFECT */
 /* perfil cliente */
 
 .checklist-servicio .service p{
@@ -485,16 +589,7 @@ main{
     font-weight: 500;
     color: #f0f1a6;
 }
-.arrows-slider{
-    /* visibility: hidden; */
-    color: #eeecec;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    padding-top: 15px;
-    visibility: hidden;
-}
+
 /* swiper button css */
 
 .nav-btn::after,
@@ -503,12 +598,18 @@ font-size: 20px;
 color: #fff;
 
 }
-.swiper-pagination-bullet {
-background-color: #f6d365;
-}
-.swiper-pagination-bullet-active {
-background-color: #f6d365;
-}
+
+.mySwiper-testimonial {
+    width: 100%;
+    height: 100%;
+  }
+ .mySwiper-testimonial {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
 /* TESTIMONIAL SECTION END*/
 .label{
     color: grey;
@@ -676,8 +777,6 @@ background-color: #f6d365;
 }
 
 .bono-conteiner{
-    width: 400px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -688,9 +787,9 @@ background-color: #f6d365;
 }
 
 .bono-conteiner .bono-img{
-    width: 350px;
-    height: 300px;
-    /* background-color: #b12a5b; */
+    width: 80%;
+    height: 80%;
+    margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -719,7 +818,69 @@ background-color: #f6d365;
   object-fit: contain;
 }
 
-
+/* RIBBON */
+.bono-box {
+    width: 300px;
+    height: 400px;
+    background-color: transparent;
+    /* border: 1px #f6d365 solid; */
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 3px 3px 8px #333;
+    margin: 10px;
+  }
+  
+  /* CONTAINER */
+  .ribbon {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+    animation: anim 1s forwards;
+  }
+  
+  .ribbon span {
+    width: 225px;
+    height: 43px;
+    background-color: blueviolet;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -20px;
+    top: 40px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+  
+  .ribbon::before,
+  .ribbon::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: darkgray;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+  }
+  
+  .ribbon::before {
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+  
+  @keyframes anim {
+    100% {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
 
 
 /* MODULOS */
@@ -871,11 +1032,12 @@ footer{
     font-weight: 500;
 }
 .logo{
-    width: 60px ;
-    height: 60px;
-    background: url(img/Logo3.png) no-repeat;
+    width: 100px ;
+    height: 100px;
+    background: url(img/logofooter.png) no-repeat;
     background-size: contain;
-    border-radius: 50%;
+    border-radius: 50% ;
+    border: 1px solid #fff;
 }
 .social-media{
     width: 50%;
@@ -1045,7 +1207,7 @@ footer{
     .slide p {
       padding: 0 20px;
     }
-    .nav-btn::after,.nav-btn::before {
+    .swiper-button-next::after, .nav-btn::after {
       display: none;
     }
     .arrows-slider{
@@ -1061,7 +1223,9 @@ footer{
         width: 80%;
         height: 100%;
     }
-    
+    .contenedor-servicio .handswipe{
+        width: 50px;
+    }
 }
 @media screen and (max-width:500px){
     .contenedor{
@@ -1172,11 +1336,6 @@ footer{
         min-height:230px;
         width: 90%;
     }
-    .bono-conteiner,.bono-conteiner .bono-img{
-        width: 100%;
-        height: 100%;
-       
-    }
     .modulo-titulo h4{
         font-size: 18px;
     }
@@ -1194,8 +1353,10 @@ footer{
         font-size: 1.2rem;
         line-height: 1.4rem;
     }
-    
-    
+    .contenedor .mySwiper-cards {
+        width: 90%;
+        height: 420px;
+      }
 }
 @media screen and (max-width: 300px) {
     
@@ -1258,7 +1419,8 @@ footer{
         font-size: 1.5rem;
         line-height: 1.6rem;
     }
-   
+    
+    
 }
 
 
