@@ -555,26 +555,26 @@ main{
     border-radius: 50%;
 }
 /* ejemplo de hijo */
-.testimonial .slide{
+.testimonial .slide, .propuesta-final .slide{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     row-gap: 30px;
 }
-.slide p{
-    padding: 0 160px;
+.testimonial .slide p, .propuesta-final .slide p{
+    padding: 0 60px;
     color: #f0f1a6;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     font-family: 'Poppins',sans-serif;
 }
-.slide .quote-icon{
+.testimonial .slide .quote-icon{
     font-size: 30px;
     color: #f2f2f2;
 }
-.slide .testimonial-details{
+.testimonial .slide .testimonial-details{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -592,12 +592,6 @@ main{
 
 /* swiper button css */
 
-.nav-btn::after,
-.nav-btn::before {
-font-size: 20px;
-color: #fff;
-
-}
 
 .mySwiper-testimonial {
     width: 100%;
