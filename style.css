@@ -296,12 +296,13 @@ a:link, a:visited, a:active {
     color: #f6d365;
 }
 /* START CARDS EFECT */
-.contenedor .mySwiper-cards {
+
+.contenedor .mySwiper-cards{
     width: 300px;
     height: 380px;
   }
 
-  .contenedor .slide-cards {
+  .contenedor .slide-cards, .contenedor .slide-logro {
     display: flex;
     flex-direction: column;
     
@@ -354,17 +355,6 @@ a:link, a:visited, a:active {
     background-color: #fff;
   }
 
-  .contenedor .slide-cards:nth-child(8n) {
-    background-color: rgb(0, 68, 255);
-  }
-
-  .contenedor .slide-cards:nth-child(9n) {
-    background-color: rgb(218, 12, 218);
-  }
-
-  .contenedor .slide-cards:nth-child(10n) {
-    background-color: rgb(54, 94, 77);
-  }
   @keyframes swipe-hand {
 
 
@@ -448,9 +438,36 @@ main{
 
 .logros-section p,.fa-check, .img-beneficio p{
     /* color: #f0f1a6; */
-    color: #fff;
+    /* color: #fff; */
+    color: #01122e;
 }
 
+/* START LOGROS SWIPER */
+.contenedor .mySwiper-lograras {
+    width: 320px;
+    height: 480px;
+}
+.contenedor .slide-logro{
+    background-image: url(https://media.istockphoto.com/id/629296762/es/foto/liderar-el-proceso-de-planificaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=6GvmiXABq4FJbwj9Oz71UKQmcT7RSlqFE71b78oEou0=);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    padding: 1.25rem;
+}
+.contenedor .slide-logro article{
+    padding-top: 14rem;
+}
+.contenedor .slide-logro h3{
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #01122e;
+    font-weight: 600;
+}
+  .logros-section .slide-logro:nth-child(1n) {
+    background-color: #fff;
+    /* border: 1px solid #fff; */
+  }
+/* END LOGROS SWIPER */
 .img-container img{
     width: 100%;
     margin: auto;
@@ -615,7 +632,7 @@ main{
 
 .n-service{
     margin-top: 7px;
-    color: #f6d365;
+    color: #fff;
 }
 .number{
     display: inline-block;
@@ -647,53 +664,8 @@ main{
 }
 
 /* PROGESS BAR CIRCLE */
-.pg-container{
-    display: flex;
-    width: 420px;
-    padding: 50px 0;
-    border-radius: 8px;
-    background: #fff;
-    row-gap: 30px;
-    flex-direction: column;
-    align-items: center;
-    
-    margin: 0 auto;
 
-}
-.circular-progress{
-    position: relative;
-    height: 225px;
-    width: 225px;
-    background: conic-gradient(#1eb3d5 3.6deg, #ededed 0deg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.circular-progress::before{
-    content: "";
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-color: #fff;
-}
-.progress-value{
-    position: relative;
-    font-size: 50px;
-    font-weight: 600;
-    color: #485563;
-    font-family: 'Poppins';
-}
-.pg-container .cupos{
-    font-weight: 600;
-    font-size: 26px;
-    color:#485563;
-    margin: 0 auto;
-}
-.container-cupos .logo{
-    margin: 0 auto;
-}
+
 /* light box */
 .imagen-light{
     position: fixed;
@@ -1347,7 +1319,7 @@ footer{
         font-size: 1.2rem;
         line-height: 1.4rem;
     }
-    .contenedor .mySwiper-cards {
+    .contenedor .mySwiper-cards, .contenedor .mySwiper-lograras{
         width: 90%;
         height: 420px;
       }
