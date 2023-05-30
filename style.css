@@ -37,7 +37,7 @@ body{
 header{
     height: 100vh;
     /* background-image: linear-gradient(180deg, #9f90f4 0, #6c6cd8 50%, #274bbd 100%); */
-    background-image:  linear-gradient(to right, rgb(67, 67, 67,0.3) 0%, rgb(0, 0, 0,0.3) 100%),url('img/tobias-mrzyk-iuqmGmst5Po-unsplash.jpg') ;
+    background-image:  linear-gradient(to right, rgb(67, 67, 67,0.3) 0%, rgb(0, 0, 0,0.3) 100%),url('img/tobiasbgcompress.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -427,7 +427,7 @@ a:link, a:visited, a:active {
 main{
    /* background-color: #238799; */
    /* background-color: #06171a; */
-    background-image:  linear-gradient(to right, rgb(67, 67, 67,0.3) 0%, rgb(0, 0, 0,0.3) 100%),url('img/tobias-mrzyk-iuqmGmst5Po-unsplash.jpg');
+    background-image:  linear-gradient(to right, rgb(67, 67, 67,0.3) 0%, rgb(0, 0, 0,0.3) 100%),url('img/tobiasbgcompress.jpg');
     /* background-image: linear-gradient(to top, #302B63 0%, #0f0c29 100%); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -466,6 +466,27 @@ main{
   .logros-section .slide-logro:nth-child(1n) {
     background-color: #fff;
     /* border: 1px solid #fff; */
+  }
+  .logros-section .slide-logro:nth-child(2n) {
+    background-image: url(img/personlogro1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    padding: 1.25rem;
+  }
+  .logros-section .slide-logro:nth-child(3n) {
+    background-image: url(img/personlogro3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    padding: 1.25rem;
+  }
+  .logros-section .slide-logro:nth-child(4n) {
+    background-image: url(img/personlogro4-min.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    padding: 1.25rem;
   }
 /* END LOGROS SWIPER */
 .img-container img{
