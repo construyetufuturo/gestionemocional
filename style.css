@@ -448,7 +448,7 @@ main{
     height: 480px;
 }
 .contenedor .slide-logro{
-    background-image: url(https://media.istockphoto.com/id/629296762/es/foto/liderar-el-proceso-de-planificaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=6GvmiXABq4FJbwj9Oz71UKQmcT7RSlqFE71b78oEou0=);
+    background-image: url(img/personlogrobg.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     
@@ -483,6 +483,13 @@ main{
   }
   .logros-section .slide-logro:nth-child(4n) {
     background-image: url(img/personlogro4-min.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    padding: 1.25rem;
+  }
+  .logros-section .slide-logro:nth-child(6n) {
+    background-image: url(img/personlogro1.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     
