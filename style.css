@@ -1351,7 +1351,7 @@ footer{
         width: 100%;
         height: 420px;
       }
-    .contenedor .mySwiper-lograras, .logros-section .checklist-servicio{
+    .contenedor .mySwiper-lograras, .logros-section .checklist-servicio, .perfil-cliente-section .checklist-servicio{
         width: 100%;
     }
     .contenedor .slide-logro article{
