@@ -1105,6 +1105,9 @@ footer{
         width: 80%;
         margin-bottom: 40px;
     }
+    .contenedor .container-hand img{
+        margin-bottom: 0;
+    }
     .checklist-servicio{
         width: 80%;
     }
