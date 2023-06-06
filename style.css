@@ -928,8 +928,24 @@ a:link, a:visited, a:active {
     height: 300px;
     background-image: url(img/garantia.png);
     background-size: contain;
+    background-repeat: no-repeat;
+}
+/* PREGUNTAS FRECUENTES */
+ .img-comprasegura{
+    width: 300px;
+    min-height: 200px;
+    /* border-radius: 50%; */
+    background-image: url(img/comprasegura.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: contain;
+    background-image: center;
+    /* background-color: #fff; */
+   display: block;
+   margin: auto;
 
 }
+
 /* PREGUNTAS FRECUENTES */
 
 .pregunta-titulo {
@@ -1378,7 +1394,7 @@ footer{
     .contenedor-img-instructor{
         margin-bottom: 25px;
     }
-    .contenedor-bonos,.contenedor-modulos, .modulo, .img-producto,.pg-container{
+    .contenedor-bonos,.contenedor-modulos, .modulo, .img-producto,.pg-container,.img-comprasegura{
         width: 100%;
     }
     .garantia{
