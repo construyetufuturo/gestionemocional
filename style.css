@@ -418,7 +418,10 @@ a:link, a:visited, a:active {
     padding-right: 12px;
     padding-bottom: 12px;
   }
- 
+ .gallery-certificado img{
+    width: 72%;
+    height: auto;
+ }
 
   @keyframes swipe-hand {
 
