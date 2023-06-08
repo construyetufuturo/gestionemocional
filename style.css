@@ -174,12 +174,12 @@ header{
 }
 .contenedor .precio-bajo{
     font-size: 1.8rem;
-    background-color: rgb(41,41,41);
+    background-color: #fff;
     color: green;
     width: 200px;
     border-top-right-radius: 9999px;
     border-bottom-right-radius:9999px;
-    border: 0.5px solid rgb(242, 242, 242,0.6);
+    border: 0.5px solid rgba(7, 8, 7, 0.6);
     text-align: center;
     font-weight: 1000;
 }
@@ -315,20 +315,102 @@ a:link, a:visited, a:active {
     color: #f6d365;
 }
 /* START CARDS EFECT */
+.contenedor .contenedor-swiper-cards{
+    width: 65vw;
+    
+}
 
-.contenedor .mySwiper-cards{
-    width: 300px;
-    height: 380px;
+.contenedor-swiper-cards .perfil-img-container{
+    width: 320px;
+    max-height: 200px;
+}
+.contenedor-swiper-cards .perfil-img1-container{
+    background-image: url(img/person7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img2-container{
+    background-image: url(img/person6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img3-container{
+    background-image: url(img/person2-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img4-container{
+    background-image: url(img/person4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img5-container{
+    background-image: url(img/person3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img6-container{
+    background-image: url(img/person4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .perfil-img7-container{
+    background-image: url(img/personlogrobg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* LOGROS */
+.contenedor-swiper-cards .logro-img1-container{
+    background-image: url(img/personlogrobg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img2-container{
+    background-image: url(img/personlogro1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img3-container{
+    background-image: url(img/personlogro3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img4-container{
+    background-image: url(img/personlogro4-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img5-container{
+    background-image: url(img/personlogrobg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img6-container{
+    background-image: url(img/personlogro1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor-swiper-cards .logro-img7-container{
+    background-image: url(img/personlogro2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedor .mySwiper-cards, .contenedor .mySwiper-lograras{
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 18px;
+    background-color: #fff;
   }
 
   .contenedor .slide-cards, .contenedor .slide-logro {
     display: flex;
-    flex-direction: column;
-    
-    
-    
+    min-height: 200px;
+    flex-wrap: nowrap;
+    background-color: #fff;
+  }
+  .contenedor .contenido-texto{
+    width: 72%;
+    padding: 12px;
   }
   .contenedor .slide-cards article, .contenedor .slide-logro article{
     color: var(--bg);
@@ -336,23 +418,7 @@ a:link, a:visited, a:active {
     padding-right: 12px;
     padding-bottom: 12px;
   }
-  .slide-cards figure {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .contenedor-servicio .slide-cards img,.contenedor-servicio .slide-logro img {
-    width: 100%;
-    transform-origin: center;
-    transform: scale(var(--img-scale));
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .contenedor .slide-cards {
-    background-color: #fff;   
-  }
-
+ 
 
   @keyframes swipe-hand {
 
@@ -452,12 +518,6 @@ a:link, a:visited, a:active {
     margin: 0;
 }
 /* START LOGROS SWIPER */
-.contenedor .mySwiper-lograras {
-    width: 320px;
-    height: 480px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    border-radius: 18px;
-}
 
 
 .contenedor .slide-logro h3{
@@ -466,10 +526,7 @@ a:link, a:visited, a:active {
     color: var(--bg);
     font-weight: 600;
 }
-  .logros-section .slide-logro {
-    background-color: #fff;
-    /* border: 1px solid #fff; */
-  }
+
   
 /* END LOGROS SWIPER */
 .img-container img{
@@ -853,6 +910,7 @@ a:link, a:visited, a:active {
   
 
 
+
 /* MODULOS */
 .contenedor-seguridad-bonos{
     display: flex;
@@ -1101,7 +1159,11 @@ footer{
         max-height: 25px;
         min-width: 22px;
     }
+    .contenedor .contenedor-swiper-cards{
+        width: 100%;       
+    }
     
+    .contenedor .container-hand {width: 20px;}
 }
 @media screen and (max-width:800px) {
     .menu-nav{
@@ -1190,7 +1252,26 @@ footer{
         flex-direction: column-reverse;
         object-fit: contain;
     }
-    
+    .contenedor .perfil-img-container{
+        width: 300px;
+        height: 100vh;
+        
+      }
+    .contenedor .mySwiper-cards,.contenedor .mySwiper-lograras{
+        width: 300px;
+    }
+      .contenedor .slide-cards, .contenedor .slide-logro {
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .contenedor .contenido-texto{
+        width: 100%;
+        height: 100%;
+      }
+      .contenedor-servicio .handswipe{
+        width: 50px;
+    }
     
 }
 @media screen and (max-width: 768px) {
@@ -1213,9 +1294,7 @@ footer{
         width: 80%;
         height: 100%;
     }
-    .contenedor-servicio .handswipe{
-        width: 50px;
-    }
+    
 }
 @media screen and (max-width:500px){
     .contenedor{
@@ -1347,17 +1426,16 @@ footer{
     .logros-section .checklist-servicio, .perfil-cliente-section .checklist-servicio{
         width: 100%;
     }
+    .contenedor .perfil-img-container{
+        width: 100%;
+        height: 100vh;
+        /* background-size: contain; */
+      }
+    .contenedor .mySwiper-cards, .contenedor .mySwiper-lograras{
+        width: 100%;
+    }
 }
-@media screen and (max-width: 400px) {
-    .contenedor .mySwiper-cards{
-        width: 100%;
-        height: 420px;
-      }
-      .contenedor .mySwiper-lograras{
-        width: 100%;
-      }
 
-}
 @media screen and (max-width: 300px) {
     
     header img{
@@ -1419,6 +1497,9 @@ footer{
         font-size: 1.5rem;
         line-height: 1.6rem;
     }
+    .contenedor .perfil-img-container{
+        background-size: contain;
+      }
     
 }
 
