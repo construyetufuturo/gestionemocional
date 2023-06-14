@@ -22,7 +22,10 @@
     /* --bg: #16213E; */
     --bg:#25344f;
     --btn-color: #FC2947;
-    --img-scale: 1.001
+    --img-scale: 1.001;
+    --amarillo :#f1b510;
+    --bg-black: #292929;
+    --btn-green: #99d217 ;
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -54,6 +57,7 @@ header{
     margin: auto;
     display: flex;
     justify-content: space-between;
+    visibility: hidden;
     /* background-color: rgb(216, 42, 42); */
     
 }
@@ -71,14 +75,11 @@ header{
     margin: auto;
     font-size: 35px
 }
-.flecha i{
-    color: #111
-}
 
 .icon-menu{
     /* z-index: 10; */
-    position: fixed;
-    /* position: relative; */
+    /* position: fixed; */
+    position: relative;
     top: 30px;
     right: 30px;
     height: 33px;
@@ -127,62 +128,154 @@ header{
     width: 100%;
     text-align: center;
 }
-.contenedor .decoracion{
-    font-size: .75rem;
-    line-height: 1rem;
-    border-width: 1px;
-    border-radius: 9999px;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    box-sizing: border-box;
-    border: 0px solid #edf2f7;
-    text-align: center;
-    background-color: rgb(44,65,99);
-    color: rgba(242, 242, 242,0.6);
-    width: 250px;
-    margin-right: auto;
-    margin-left: auto;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    padding: 10px 16px;
-    visibility: hidden;
-}
+
 .contenedor .decoracion li{
     padding: 0 2px;
 }
+/* PRECIO OFERTA 1 */
 .contenedor .contenedor-precios{
     
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     font-weight: 900;
+    font-family: 'Roobert',sans-serif;
 }
-.contenedor .precio-alto{
-    font-size: 1.6rem;
-    background-color: rgb(41,41,41);
-    color: red;
+
+.contenedor .precio-alto,.contenedor .precio-bajo{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #99d217; */
+    
+}
+.contenedor .precio-alto p{
+    font-size: 2rem;
+    color: #fff;
     width: 200px;
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius:9999px;
-    border: 0.5px solid rgb(242, 242, 242,0.6);
     text-align: center;
     text-decoration: line-through;
     text-decoration-color: #f2f2f2;
     
+    
 }
-.contenedor .precio-bajo{
-    font-size: 1.8rem;
-    background-color: #fff;
-    color: green;
+.contenedor .precio-bajo p{
+    font-size: 3rem;
+    background-color: transparent;
+    color: #fff;
     width: 200px;
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius:9999px;
-    border: 0.5px solid rgba(7, 8, 7, 0.6);
     text-align: center;
     font-weight: 1000;
+    
+    
 }
+.contenedor .precio-alto span{
+    font-weight: 400;
+    font-size: .8;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    padding-top: .9rem ;
+}
+.contenedor .precio-bajo span{
+    font-weight: 400;
+    font-size: .8;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    padding-top: 1.8rem ;
+}
+.contenedor .ofertamensaje{
+    padding: 1rem 0;
+    color: aqua;
+    font-size: 2rem;
+    text-align: center;
+}
+.contenedor-oferta .contenedorbandera{
+    text-align: center;
+    font-size: .9rem;
+    color: #c5c8dc;
+}
+/*  */
+/*  */
+.contenedor .mensaje-aviso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-live-icon{
+
+    width: 52px;
+    height: 52px;
+}
+.contenedor .live-dot{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .live-dot::before{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    border-radius: 50%;
+}
+.contenedor .live-dot::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    animation: animatelive ease-in 1s infinite;
+    border-radius: 50%;
+}
+@keyframes animatelive{
+    from{
+        opacity: 0.8;
+    }
+    to{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*  */
+/*  */
+/*  */
+
+/* OFERTA CANTIDAD PERSONAS VIENDO */
+#cantidadpersonasoferta, #mensajecompraciudad{
+    color: #fff;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: .8rem .3rem;
+    border: 1px solid var(--btn-color);
+    margin: .5rem 0;
+    width: 80%;
+    
+}
+#cantidadpersonasoferta span,#mensajecompraciudad span{
+    color: var(--btn-color);
+}
+/* ENUNCIADO TITULO */
+
+.contenedor .seccion-titulo-instruccion{
+    text-align: center;
+    /* text-transform: uppercase; */
+    color: var(--bg);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2.3rem;
+}
+/* ENUNCIADO TITULO */
+
+
+/* OFERTA CANTIDAD PERSONAS VIENDO */
 .contenedor .titulo-container{
     width: 80%;
     /* background-color: rgba(255, 255, 255, .15);    */
@@ -196,13 +289,14 @@ header{
     font-size:2.5rem;
     margin-bottom: 2.5rem;
     color: white; text-shadow: black 0.1em 0.1em 0.2em;
-    /* color: white; */
-    /* color: white; */
     font-weight: 700;
     letter-spacing: -.025em;
     line-height: 2.6rem;
     padding: 8px 18px;
     
+}
+.contenedor .titulo span{
+    color:#f1b510;
 }
 
 .contenedor .copy{
@@ -225,11 +319,7 @@ a:link, a:visited, a:active {
 
 .ver-video a{
     cursor: pointer;
-    /* background-color: #06171a; */
-    /* background-color:var(--bg); */
-    /* background-color:transparent; */
-    background-color: rgba(255, 255, 255, .15);   
-    backdrop-filter: blur(2px);
+    background-color: transparent;
     margin: auto;
     display: block;
     width: 250px;
@@ -264,28 +354,28 @@ a:link, a:visited, a:active {
 #cuenta{
     display: flex;
     justify-content:center;
-    margin: 40px 60px;
+    margin: 10px 60px;
     
 }
 
 .simply-amount{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fff;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #111;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 3px solid #111;
     
 }
 .simply-word{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 12px;
-    color: #fff;
+    color: #111;
 }
 .simply-hours-section,.simply-minutes-section,.simply-seconds-section{
     text-align: center;
@@ -296,6 +386,7 @@ a:link, a:visited, a:active {
 .simply-days-section{
     display: none;
 }
+
 /*  */
 /* Anuncio */
 .anuncio{
@@ -315,6 +406,7 @@ a:link, a:visited, a:active {
     color: #f6d365;
 }
 /* START CARDS EFECT */
+
 .contenedor .contenedor-swiper-cards{
     width: 65vw;
     
@@ -407,6 +499,7 @@ a:link, a:visited, a:active {
     min-height: 200px;
     flex-wrap: nowrap;
     background-color: #fff;
+   
   }
   .contenedor .contenido-texto{
     width: 72%;
@@ -422,8 +515,16 @@ a:link, a:visited, a:active {
     width: 72%;
     height: auto;
  }
-
-  @keyframes swipe-hand {
+.contenedor .numberslider{
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    right: 7px;
+    font-size: 15px;
+    color: var(--bg);
+    font-weight: 600;
+}
+@keyframes swipe-hand {
 
 
     0% {
@@ -435,10 +536,27 @@ a:link, a:visited, a:active {
         margin-right:20px;
         transform: rotate(-5deg);
     }
-
-
-
 }
+.contenedor .indicacionflecha p{
+    position: absolute; bottom: 10px; right: 28px; color:grey; font-size: .8rem; font-style: italic; font-family:'Poppins';
+    font-weight: 500;
+}
+.contenedor .indicacionflecha i{
+    position: absolute; bottom: 10px; right: 10px; color: gray;
+    animation: flecharight1 1s ease-in-out infinite;
+    margin-left: 9px;
+}
+
+@keyframes flecharight1 {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, 0);
+    }
+  }
 .container-hand{
     width: 80px;
     height: 50px;
@@ -507,10 +625,10 @@ a:link, a:visited, a:active {
 .checklist-servicio{
     width: 45%;
 }
-
-.logros-section p,.fa-check, .img-beneficio p{
-    /* color: #f0f1a6; */
-    /* color: #fff; */
+.logros-section,.perfil-cliente-section{
+    height: 90vh;
+}
+.fa-check, .img-beneficio p{
     color: var(--bg);
 }
 .logros-section p,.fa-check, .img-beneficio h3{
@@ -520,20 +638,28 @@ a:link, a:visited, a:active {
     font-weight: 600;
 }
 /* ANUNCIO TIEMPO */
+
 .tiempo-limitado-section{
     width: 100%;
-    background-color: #111;
+    background-color: #fff;
     padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 .tiempo-limitado-section h2{
     text-align: center;
-    color: #fff;
-    font-weight: 400;
+    color: #111;
+    font-weight: 500;
     font-family: 'Poppins',sans-serif;
     margin-bottom: 12px;
 }
 .tiempo-limitado-section #cuenta{
     margin: 0;
+}
+.tiempo-hidden-active{
+    display: none;
 }
 /* START LOGROS SWIPER */
 
@@ -616,7 +742,9 @@ a:link, a:visited, a:active {
     
 }
 /* INSCRIPTION START */
-
+.inscripcion-section{
+    background-color: #111;
+}
 .inscripcion-section h1{
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -692,11 +820,11 @@ a:link, a:visited, a:active {
 .mySwiper-testimonial {
     width: 100%;
     height: 100%;
-  }
- .mySwiper-testimonial {
     margin-left: auto;
     margin-right: auto;
+    
   }
+
 
 
 
@@ -1135,8 +1263,59 @@ footer{
     background-color: #fff;
     margin-bottom: 60px;
 }
+/* PROGRESS BAR START */
+.gatillo-progress-bar{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #fff; */
+    /* margin-bottom: 8rem; */
+}
+.gatillo-progress-bar .progress-container{
+    margin-bottom: 25px;
+}
+.gatillo-progress-bar .progress-container h4{
+    margin: 15px 15px;
+    letter-spacing: .5px;
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    
+}
+.gatillo-progress-bar .progress-container .progress-bar{
+    position: relative;
+    width: 750px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #c5c8dc;
+}
+.gatillo-progress-bar .progress-container .progress-bar span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    border-radius: 30px;
+    background: var(--bg);
+    /* background-color: var(--btn-color); */
+    transition: width 2.5s linear;
+}
+/* PROGRESS BAR END */
+/* MENU FIJO START */
 
 
+
+
+/* MENU FIJO END */
 /* #CC6600  */
 /* RESPONSIVE */
 @media screen and (max-width:985px) {
@@ -1183,6 +1362,9 @@ footer{
     }
     
     .contenedor .container-hand {width: 20px;}
+    .gatillo-progress-bar .progress-container .progress-bar{
+       width: 600px;
+    }
 }
 @media screen and (max-width:800px) {
     .menu-nav{
@@ -1287,6 +1469,15 @@ footer{
       .contenedor-servicio .handswipe{
         width: 50px;
     }
+    .logros-section,.perfil-cliente-section{
+        height: auto;
+    }
+    .gatillo-progress-bar .progress-container .progress-bar{
+        width: 100%;
+        height: 30px;
+    }
+    
+    
     
 }
 @media screen and (max-width: 768px) {
@@ -1308,6 +1499,13 @@ footer{
     .contenedor-garantia{
         width: 80%;
         height: 100%;
+    }
+    .gatillo-progress-bar .progress-container .progress-bar{
+        width: 100%;
+        height: 20px;
+    }
+    .gatillo-progress-bar .progress-container .progress-bar span{
+        font-size: 12px;
     }
     
 }
@@ -1389,6 +1587,7 @@ footer{
         height: max-content;
     }
     
+    
 }
 @media screen and (max-width:480px){
     /* .header .titulo{
@@ -1449,6 +1648,7 @@ footer{
     .contenedor .mySwiper-cards, .contenedor .mySwiper-lograras{
         width: 100%;
     }
+    
 }
 
 @media screen and (max-width: 300px) {
@@ -1515,6 +1715,14 @@ footer{
     .contenedor .perfil-img-container{
         background-size: contain;
       }
+      .contenedor .indicacionflecha p, .contenedor .indicacionflecha i{
+        bottom: 3px;  
+       
+    }
+    .gatillo-progress-bar .progress-container .progress-bar{
+        width: 100%;
+        height: 20px;
+    }
     
 }
 
@@ -1534,7 +1742,7 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.1
 } */
 .button {
     /* background-color: rgb(153, 210, 23); */
-    background-color: var(--btn-color);
+    background-color: var(--btn-green);
     /* background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%); */
     border: none;
     /* color: #333; */
@@ -1565,12 +1773,6 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.1
 .metodos-pago{
     width: 325px;
     height: 100px;
-    /* background: url(img/payments2.png) no-repeat;
-    background-size: contain;
-    margin: auto;
-    align-items: center;
-    display: inline-block; */
-    /* background-color: #FFF; */
     margin: auto;
     display: block;
 }
@@ -1599,13 +1801,13 @@ background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.1
 .button-box a:hover{
   /* background: rgb(146,63,251); */
   /* background: rgb(249, 214, 36); */
-  background: var(--btn-color);
+  background: var(--btn-green);
   color: #fff;
   border-radius: 9999px;
-  box-shadow: 0 0 5px var(--btn-color),
-              0 0 25px var(--btn-color),
-              0 0 50px var(--btn-color),
-              0 0 100px var(--btn-color);
+  box-shadow: 0 0 5px var(--btn-green),
+              0 0 25px var(--btn-green),
+              0 0 50px var(--btn-green),
+              0 0 100px var(--btn-green);
 }
 .button-box  a span{
   position: absolute;
